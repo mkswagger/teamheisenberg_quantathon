@@ -29,7 +29,7 @@ const Particle: FunctionComponent = () => {
               },
             },
             color: {
-              value: "#fff",
+              value: "#512B81",
             },
             shape: {
               type: "circle",
@@ -68,7 +68,7 @@ const Particle: FunctionComponent = () => {
             line_linked: {
               enable: true,
               distance: 600,
-              color: "#28D8FE",
+              color: "#808CCF",
               opacity: 0.4,
               width: 2,
             },
