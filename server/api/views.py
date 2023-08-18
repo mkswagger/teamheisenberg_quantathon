@@ -15,13 +15,13 @@ from qiskit.visualization import plot_bloch_multivector
 matplotlib.use('Agg')
 
 hamiltonian_terms = [
-    (0.00698131079425246, "IIIZ"),
-    (-0.0004978294000830275, "IIZI"),
-    (4.664512584628966e-05, "IZII"),
-    (0.0004303465157577957, "ZIII"),
-    (0.5099539391488543, "IIZZ"),
-    (0.5099677387273946, "IZIZ"),
-    (0.5099488492845516, "IZZI"),
+    {0.00698131079425246, "IIIZ"},
+    {-0.0004978294000830275, "IIZI"},
+    {4.664512584628966e-05, "IZII"},
+    {0.0004303465157577957, "ZIII"},
+    {0.5099539391488543, "IIZZ"},
+    {0.5099677387273946, "IZIZ"},
+    {0.5099488492845516, "IZZI"},
 ]
 
 @api_view(["GET"])
@@ -78,9 +78,14 @@ def index(request):
 @api_view(["POST"])
 def generate_charts(request):
     if request.method == "POST":
+        data = request.data.get('data', [])
+        hamiltonian_terms = [(item['value'], item['term']) for item in data]
+
+        # Create the Hamiltonian operator
         hamiltonian = sum(
             coeff * PauliSumOp.from_list([(term, coeff)]) for coeff, term in hamiltonian_terms
         )
+
         # Define the ansatz circuit
         num_assets = 4  # Adjust as needed
         ansatz = TwoLocal(num_assets, "ry", "cz", reps=3, entanglement="full")
@@ -98,7 +103,6 @@ def generate_charts(request):
         # Run the VQE algorithm
         result = vqe.compute_minimum_eigenvalue(operator=hamiltonian)
 
-
         # Extract the eigenstate
         eigenstate = result.eigenstate
 
@@ -108,8 +112,6 @@ def generate_charts(request):
         plt.plot(np.real(eigenstate), label="Real Part", color="b")
         plt.plot(np.imag(eigenstate), label="Imaginary Part", color="r")
         plt.xlabel("Basis State")
-
-
         plt.ylabel("Value")
         plt.title("Eigenstate Waveform")
         plt.legend()
@@ -123,8 +125,7 @@ def generate_charts(request):
         bloch_path = "media/plots/bloch_sphere.png"
         plt.savefig(bloch_path)
 
-        return Response({"message":"successful","bloch_path":bloch_path,"eigenstate_path":eigenstate_path},status=status.HTTP_200_OK)
-
+        return Response({"message": "successful", "bloch_path": bloch_path, "eigenstate_path": eigenstate_path}, status=status.HTTP_200_OK)
 
 @api_view(['POST'])
 def benchmark(request):
