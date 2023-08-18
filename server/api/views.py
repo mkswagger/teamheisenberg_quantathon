@@ -8,9 +8,10 @@ from qiskit.algorithms.optimizers import SPSA
 from qiskit.algorithms import VQE
 from qiskit.circuit.library import TwoLocal
 from qiskit.opflow import PauliSumOp
+import matplotlib
 import matplotlib.pyplot as plt
 from qiskit.visualization import plot_bloch_multivector
-
+matplotlib.use('Agg')
 
 hamiltonian_terms = [
     (0.00698131079425246, "IIIZ"),
