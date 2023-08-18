@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function Signup() {
   return (
-    <div className="w-full h-screen flex items-center justify-center ">
+    <div className="w-full h-screen flex items-center justify-center font-mono">
       <div className="flex flex-col w-[70%] sm:w-[70%] md:w-[40%] h-auto  rounded-lg backdrop-blur-sm bg-zinc-800 opacity-80 max-w-md z-10 px-5 pt-10 ">
         <div className="flex justify-center blur-none ">
           <Image src={boot} alt="logo" className="w-20 " />
