@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^2.12.0"
+  }
+}
