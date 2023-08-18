@@ -18,12 +18,6 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-5">
           <Link
-            href="/about"
-            className="text-white hover:text-gray-300 hover:underline"
-          >
-            About
-          </Link>
-          <Link
             href="/compiler"
             className="text-white hover:text-gray-300 hover:underline"
           >
