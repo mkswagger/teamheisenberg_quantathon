@@ -2,6 +2,7 @@ import next from "next"
 import React, { useState } from "react"
 import Image from "next/image"
 import logo from "../assets/logo.svg"
+import Link from "next/link"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -16,24 +17,24 @@ const Navbar = () => {
           <Image src={logo} alt="Logo" className="w-12" />
         </div>
         <div className="hidden md:flex space-x-5">
-          <a
-            href="#"
+          <Link
+            href="/about"
             className="text-white hover:text-gray-300 hover:underline"
           >
             About
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/compiler"
             className="text-white hover:text-gray-300 hover:underline"
           >
             Compiler
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/energy-states"
             className="text-white hover:text-gray-300 hover:underline"
           >
             Energy States
-          </a>
+          </Link>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white">
