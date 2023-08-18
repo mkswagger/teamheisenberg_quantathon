@@ -1,6 +1,7 @@
 import React from "react"
 import boot from "../assets/boot.svg"
 import Image from "next/image"
+import Link from "next/link"
 
 function Signup() {
   return (
@@ -72,8 +73,12 @@ function Signup() {
               Sign Up
             </button>
           </div>
+          <Link href="/login" className="hover:underline py-3">
+            Log In? Click here
+          </Link>
         </form>
       </div>
+
       {/* <div className="flex flex-col w-[70%] sm:w-[70%] md:w-[40%] h-[60%] sm:h-[60%] md:h-[50%]  opacity-80 rounded-lg bg-zinc-800 max-w-md blur-sm absolute"></div> */}
     </div>
   )
