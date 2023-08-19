@@ -1,5 +1,5 @@
 import React from "react"
-
+import DropdownComponent from "./Dropdown"
 function Compiler() {
   return (
     <div className="flex justify-center items-center  h-[95vh] border-[20px] border-spacing-20 border-[#512B81] w-full font-mono bg-black ">
@@ -11,9 +11,9 @@ function Compiler() {
             </button>
           </div>
           <div>
-            <textarea class="bg-gray-700 text-white ml-5   w-[48vw] h-[75vh]  rounded-lg border-none resize-none focus:outline-none">
-              Enter your text here...
-            </textarea>
+            <div className="pl-10">
+              <DropdownComponent />
+            </div>
           </div>
         </div>
         <div className="w-full h-[85vh] text-white">
