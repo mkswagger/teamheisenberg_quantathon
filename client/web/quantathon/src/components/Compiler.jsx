@@ -1,5 +1,9 @@
+
+import React from "react"
+import DropdownComponent from "./Dropdown"
 import axios from "axios";
 import React, { useState } from "react";
+
 
 function Compiler() {
   const [data, setData] = useState();
@@ -29,12 +33,16 @@ function Compiler() {
             </button>
           </div>
           <div>
+            <div className="pl-10">
+              <DropdownComponent />
+            </div>
+
             <textarea
               onChange={(e) => setData(e.target.value)}
-              placeholder="Enter your input here...
-"
+              placeholder="Enter your input here..."
               className="bg-gray-700 text-white ml-5 p-2 w-[48vw] h-[75vh]  rounded-lg border-none resize-none focus:outline-none"
             ></textarea>
+ 
           </div>
         </div>
         <div className="w-full h-[85vh] text-white">
