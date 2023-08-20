@@ -34,3 +34,7 @@ This project demonstrates the application of Variational Quantum Eigensolver (VQ
    python main.py
    ```
 3. View the computed eigenstate, eigenvalue, and Bloch sphere visualization.
+
+## Future Enhancements
+
+- **Incorporate noise models to simulate real-world quantum devices.** 
