@@ -1,4 +1,4 @@
-# Quantum Energy Calculation with VQE
+ # Quantum Energy Calculation with VQE
 
 ![Project Banner](path_to_banner_image)
 
@@ -19,4 +19,16 @@ This project demonstrates the application of Variational Quantum Eigensolver (VQ
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your_username/quantum-energy-calculation.git
+   git clone https://github.com/mkswagger/teamheisenberg_quantathon/
+
+2. Install required dependencies
+
+   ```bash
+   pip install -r requirements.txt
+3. Usage
+   1.Open the main.py file and adjust the Hamiltonian terms for your specific system.
+   2.Run the script:
+   ```bash
+   python main.py
+   ```
+   3.View the computed eigenstate, eigenvalue, and Bloch sphere visualization.
