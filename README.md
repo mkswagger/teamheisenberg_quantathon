@@ -38,3 +38,8 @@ This project demonstrates the application of Variational Quantum Eigensolver (VQ
 ## Future Enhancements
 
 - Incorporate noise models to simulate real-world quantum devices
+- Explore advanced ansatz circuits for improved accuracy.
+- Integrate parameter optimization techniques for better convergence.
+
+- ## Acknowledgments
+- Special thanks to the Quantum Computing community for their valuable resources and insights.
