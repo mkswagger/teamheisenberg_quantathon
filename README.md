@@ -37,4 +37,4 @@ This project demonstrates the application of Variational Quantum Eigensolver (VQ
 
 ## Future Enhancements
 
-- **Incorporate noise models to simulate real-world quantum devices.** 
+- Incorporate noise models to simulate real-world quantum devices
