@@ -1,6 +1,6 @@
  # Quantum Energy Calculation with VQE
 
-![Project Banner](path_to_banner_image)
+![Bloch-Sphere](https://i.imgur.com/YRhv4rA.png)
 
 ## Introduction
 
