@@ -25,7 +25,9 @@ This project demonstrates the application of Variational Quantum Eigensolver (VQ
 
    ```bash
    pip install -r requirements.txt
+   
  ##Usage
+ 
 1. Open the main.py file and adjust the Hamiltonian terms for your specific system.
 2. Run the script:
    ```bash
