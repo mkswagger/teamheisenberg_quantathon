@@ -41,5 +41,5 @@ This project demonstrates the application of Variational Quantum Eigensolver (VQ
 - Explore advanced ansatz circuits for improved accuracy.
 - Integrate parameter optimization techniques for better convergence.
 
-- ## Acknowledgments
+## Acknowledgments
 - Special thanks to the Quantum Computing community for their valuable resources and insights.
