@@ -1,14 +1,15 @@
-import next from "next"
-import React, { useState } from "react"
-import Image from "next/image"
-import logo from "../assets/logo.svg"
-import Link from "next/link"
+"use client";
+import next from "next";
+import React, { useState } from "react";
+import Image from "next/image";
+import logo from "../assets/logo.svg";
+import Link from "next/link";
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <nav className="bg-[#35155D] p-4 font-mono">
@@ -18,17 +19,23 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-5">
           <Link
+            href="/"
+            className="text-white hover:text-gray-300 hover:underline"
+          >
+            Home
+          </Link>
+          <Link
             href="/compiler"
             className="text-white hover:text-gray-300 hover:underline"
           >
-            Compiler
+            Graph Gen
           </Link>
-          <Link
+          {/* <Link
             href="/energy-states"
             className="text-white hover:text-gray-300 hover:underline"
           >
             Energy States
-          </Link>
+          </Link> */}
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white">
@@ -72,7 +79,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
