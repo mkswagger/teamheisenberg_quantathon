@@ -29,3 +29,4 @@ stevedore==5.1.0
 symengine==0.9.2
 sympy==1.12
 typing_extensions==4.7.1
+gunicorn==21.2.0
